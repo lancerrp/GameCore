@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TestConfig id="1111">
+  <child id="1" />
+  <child id="2">
+	<names>aaa</names>
+	<names>bbbb</names>
+  </child>
+</TestConfig>

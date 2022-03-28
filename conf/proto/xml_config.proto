@@ -1,0 +1,21 @@
+package Config;
+
+message XmlConfigGroup
+{
+	optional string 			xml_bin = 1;
+	optional string 			sheet_bin = 2;
+	repeated XmlConfigInfo  	xml_info = 3;
+	repeated SheetConfigInfo  	sheet_info = 4;
+}
+
+message XmlConfigInfo
+{
+	optional string xml_type = 1;
+	optional string  path = 2;
+}
+
+message SheetConfigInfo
+{
+	optional string xml_type = 1;
+	optional string  path = 2;
+}
