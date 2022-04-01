@@ -1,0 +1,14 @@
+package Config;
+
+message StringConfig
+{
+	optional string key = 1;
+	repeated StringCfgLang lang = 2;
+}
+
+message StringCfgLang
+{
+	optional int32 id = 1;
+	optional string value = 2;
+}
+

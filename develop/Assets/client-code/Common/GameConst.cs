@@ -62,3 +62,13 @@ public static class PlayerPrefsDefine
     public static string Install_Key = string.Format("{0}_Install_{1}", GameConst.GameDefine, Application.version);
     public static string Config_Key = string.Format("{0}_Config", GameConst.GameDefine);
 }
+
+public static class GameDataLang
+{
+    public const string Check_Update = "检查更新...";
+    public const string Check_Update_End = "更新完成...";
+    public const string Download_Res = "资源下载{0}/{1}...";
+    public const string Download_Res_Finish = "资源下载完成";
+    public const string Load_Config = "加载配置文件...";
+    public const string UnZip_Config = "解压配置文件...";
+}

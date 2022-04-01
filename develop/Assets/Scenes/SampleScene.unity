@@ -442,9 +442,9 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1280, y: 720}
+  m_ReferenceResolution: {x: 720, y: 1280}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -483,7 +483,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 868519435}
-  - {fileID: 1297553241}
+  - {fileID: 1860201482}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -492,11 +492,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!224 &1297553241 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 735867143919453303, guid: 3e0f5b104d2539949913b4f5e03dbf5a, type: 3}
-  m_PrefabInstance: {fileID: 4427360207281738323}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1680479220
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,7 +558,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &4427360207281738323
+--- !u!1001 &1860201481
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -572,7 +567,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 20778440546173427, guid: 3e0f5b104d2539949913b4f5e03dbf5a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 735867143919453302, guid: 3e0f5b104d2539949913b4f5e03dbf5a, type: 3}
       propertyPath: m_Name
@@ -580,7 +575,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 735867143919453302, guid: 3e0f5b104d2539949913b4f5e03dbf5a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 735867143919453303, guid: 3e0f5b104d2539949913b4f5e03dbf5a, type: 3}
       propertyPath: m_Pivot.x
@@ -666,5 +661,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1513091417579711866, guid: 3e0f5b104d2539949913b4f5e03dbf5a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e0f5b104d2539949913b4f5e03dbf5a, type: 3}
+--- !u!224 &1860201482 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 735867143919453303, guid: 3e0f5b104d2539949913b4f5e03dbf5a, type: 3}
+  m_PrefabInstance: {fileID: 1860201481}
+  m_PrefabAsset: {fileID: 0}

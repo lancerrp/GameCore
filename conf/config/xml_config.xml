@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <XmlConfigGroup>
 	<!-- xml配置 -->
-	<xml_info xml_type="TestConfig" path="config/xml_config/test_config.xml"/>
-	<xml_info xml_type="Test2Config" path="config/xml_config/test2_config.xml"/>
+	<xml_info xml_type="StringConfig" path="config/xml_config/string_config.xml"/>
 	
 	
 	

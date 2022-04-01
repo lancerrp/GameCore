@@ -1,7 +1,0 @@
-package Config;
-
-message Test2Config
-{
-	optional int32  id = 1;
-}
-

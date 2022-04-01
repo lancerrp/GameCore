@@ -1,5 +1,4 @@
-/
 
-TestConfig!config/xml_config/test_config.xml1
-Test2Config"config/xml_config/test2_config.xml"%
+3
+StringConfig#config/xml_config/string_config.xml%
 	TestSheetconfig/sheet_config/test

@@ -18,31 +18,9 @@ namespace Config
   {
     public XmlConfigGroup() {}
     
-    // TYPE_STRING : xml_bin
-    private string _xml_bin = "";
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"xml_bin", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue("")]
-    [global::System.Xml.Serialization.XmlAttribute(@"xml_bin")]
-        
-    public string xml_bin
-    {
-      get { return _xml_bin; }
-      set { _xml_bin = value; }
-    }
-    // TYPE_STRING : sheet_bin
-    private string _sheet_bin = "";
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"sheet_bin", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue("")]
-    [global::System.Xml.Serialization.XmlAttribute(@"sheet_bin")]
-        
-    public string sheet_bin
-    {
-      get { return _sheet_bin; }
-      set { _sheet_bin = value; }
-    }
     // TYPE_MESSAGE.Config.XmlConfigInfo : xml_info
     private  global::System.Collections.Generic.List<Config.XmlConfigInfo> _xml_info = new global::System.Collections.Generic.List<Config.XmlConfigInfo>();
-    [global::ProtoBuf.ProtoMember(3, Name=@"xml_info", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    [global::ProtoBuf.ProtoMember(1, Name=@"xml_info", DataFormat = global::ProtoBuf.DataFormat.Default)]
     [global::System.Xml.Serialization.XmlElement(@"xml_info")]
     
     public global::System.Collections.Generic.List<Config.XmlConfigInfo> xml_info
@@ -53,7 +31,7 @@ namespace Config
   
     // TYPE_MESSAGE.Config.SheetConfigInfo : sheet_info
     private  global::System.Collections.Generic.List<Config.SheetConfigInfo> _sheet_info = new global::System.Collections.Generic.List<Config.SheetConfigInfo>();
-    [global::ProtoBuf.ProtoMember(4, Name=@"sheet_info", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    [global::ProtoBuf.ProtoMember(2, Name=@"sheet_info", DataFormat = global::ProtoBuf.DataFormat.Default)]
     [global::System.Xml.Serialization.XmlElement(@"sheet_info")]
     
     public global::System.Collections.Generic.List<Config.SheetConfigInfo> sheet_info
