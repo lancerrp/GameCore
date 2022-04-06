@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: font Group
+  m_EditorClassIdentifier: 
+  m_GroupName: font Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 7e12f677e569d5a4c8cb7d9d704664da
+  m_SerializeEntries:
+  - m_GUID: 3cc6e9e187b33184abe45183474e2da2
+    m_Address: ADOBEHEITISTD-REGULAR SDF
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 17cd24eac023c544bb4625494c4da2da, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 287c3eb4bf929fd49a8cf66c18e42876, type: 2}
+    - {fileID: 11400000, guid: db448050a94409147b2e664ed6e5c24a, type: 2}

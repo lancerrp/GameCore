@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XmlConfigGroup>
+	<!-- xml配置 -->
+	<xml_info xml_type="StringConfig" path="config/xml_config/string_config.xml"/>
+	
+	
+	
+	
+	
+	
+	<!-- sheet配置 -->
+	<sheet_info xml_type="TestSheet" path="config/sheet_config/test"/>
+</XmlConfigGroup>

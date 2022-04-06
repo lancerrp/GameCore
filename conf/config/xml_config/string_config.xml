@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<StringConfig key="cn">
+	<lang id="100001" value="加载配置文件..." />
+	<lang id="100002" value="解压配置文件..." />
+</StringConfig>
