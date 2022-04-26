@@ -45,3 +45,14 @@ MonoBehaviour:
     groupTemplateApplicationMode: 0
     simplified: 1
     addressReplacement: 
+  - path: Assets/config/bin/*.txt
+    matchType: 0
+    groupName: Config Group
+    LabelMode: 1
+    labelRefs:
+    - m_LabelString: config
+    dynamicLabels: []
+    groupTemplate: {fileID: 11400000, guid: 2bba99351dd49de4fa5f703cf8bd0970, type: 2}
+    groupTemplateApplicationMode: 0
+    simplified: 1
+    addressReplacement: 

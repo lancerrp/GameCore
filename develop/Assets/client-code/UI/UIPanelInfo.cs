@@ -8,6 +8,7 @@ public class UIPanelInfo
     public string key;
     public UIPanelBase panelBase;
     public bool active;
+    public object[] param = null;
 
     private bool mIsLoad = false;
     private GameObject mPanelObject = null;
@@ -34,6 +35,7 @@ public class UIPanelInfo
         if (mIsLoad)
         {
             SetPanelActive();
+            GameResManager.instance.FreeGameObject(mPanelObject);
         }
     }
 
@@ -70,12 +72,12 @@ public class UIPanelInfo
 
     private void LoadPanelRes() 
     {
-        GameResManager.instance.LoadAddressGameObject(GameResManager.EResType.UI, key, OnPanelResLoaded);
+        GameResManager.instance.InstantiateAsync(key, OnPanelResLoaded);
     }
 
     private void OnPanelResLoaded(GameObject obj)
     {
-        mPanelObject = GameObject.Instantiate(obj);
+        mPanelObject = obj;
         if (mPanelObject == null) 
         {
             return;
@@ -97,6 +99,7 @@ public class UIPanelInfo
         {
             return;
         }
+        panelBase.SetParam(param);
         panelBase.SetActive(active);
     }
 

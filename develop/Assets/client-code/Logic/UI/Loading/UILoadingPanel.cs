@@ -23,6 +23,7 @@ public class UILoadingPanel : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        DontDestroyOnLoad(gameObject);
         mTips = ObjectCommonUtils.GetChildComponent<TextMeshProUGUI>(gameObject, "root/tip");
         mSliderValue = ObjectCommonUtils.GetChildComponent<TextMeshProUGUI>(gameObject, "root/Slider/value");
         mSlider = ObjectCommonUtils.GetChildComponent<Slider>(gameObject, "root/Slider");

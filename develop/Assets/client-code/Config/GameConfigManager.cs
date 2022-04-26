@@ -32,14 +32,13 @@ public class GameConfigManager : BaseSingle<GameConfigManager>
     {
         if (LoadBinaryData)
         {
-            UnityWebRequestUtils.LoadStreamSync(GameConst.ConfBinFile, (success, data) =>
+            var data = GameResManager.instance.LoadAsset<TextAsset>("xml_config");
+            if (data != null)
             {
-                Debug.LogFormat("º”‘ÿ≈‰÷√:xml_config,{0},{1}", success, DateTime.Now);
-                if (success)
-                {
-                    mConfig = ProtoBuf.Serializer.Deserialize<XmlConfigGroup>(data);
-                }
-            });
+                System.IO.Stream stream = new System.IO.MemoryStream(data.bytes);
+                mConfig = ProtoBuf.Serializer.Deserialize<XmlConfigGroup>(stream);
+            }
+            GameResManager.instance.FreeAsset(data);
         }
         else
         {
@@ -56,15 +55,14 @@ public class GameConfigManager : BaseSingle<GameConfigManager>
         T result = null;
         if (LoadBinaryData)
         {
-            string path = string.Format("{0}/bin/{1}.bin", GameConst.ConfPath, fileName);
-            UnityWebRequestUtils.LoadStreamSync(path, (success, data) =>
+            var data = GameResManager.instance.LoadAsset<TextAsset>(fileName);
+            Debug.LogFormat("º”‘ÿ≈‰÷√:{0},{1},{2}", fileName, data != null, DateTime.Now);
+            if (data != null)
             {
-                Debug.LogFormat("º”‘ÿ≈‰÷√:{0},{1},{2}", fileName, success, DateTime.Now);
-                if (success)
-                {
-                    result = ProtoBuf.Serializer.Deserialize<T>(data);
-                }
-            });
+                System.IO.Stream stream = new System.IO.MemoryStream(data.bytes);
+                result = ProtoBuf.Serializer.Deserialize<T>(stream);
+            }
+            GameResManager.instance.FreeAsset(data);
         }
         else 
         {
@@ -94,16 +92,16 @@ public class GameConfigManager : BaseSingle<GameConfigManager>
         T result = null;
         if (LoadBinaryData)
         {
-            string binPath = string.Format("{0}/bin/{1}_sheet.bin", GameConst.ConfPath, System.IO.Path.GetFileNameWithoutExtension(path));
-            T[] array = null ;
-            UnityWebRequestUtils.LoadStreamSync(binPath, (success, data) =>
+            string fileName = string.Format("{0}_sheet", System.IO.Path.GetFileNameWithoutExtension(path));
+            var data = GameResManager.instance.LoadAsset<TextAsset>(fileName);
+
+            T[] array = null;
+            Debug.LogFormat("º”‘ÿ≈‰÷√:{0},{1},{2}", fileName, data != null, DateTime.Now);
+            if (data != null)
             {
-                Debug.LogFormat("º”‘ÿ≈‰÷√:{0},{1},{2}", type.ToString(), success, DateTime.Now);
-                if (success)
-                {
-                    array = ProtoBuf.Serializer.Deserialize<T[]>(data);
-                }
-            });
+                System.IO.Stream stream = new System.IO.MemoryStream(data.bytes);
+                array = ProtoBuf.Serializer.Deserialize<T[]>(stream);
+            }
             Dictionary<int, object> map = new Dictionary<int, object>();
             if (array != null) 
             {
@@ -118,6 +116,8 @@ public class GameConfigManager : BaseSingle<GameConfigManager>
                 }
             }
             mCacheSheetMap.Add(type, map);
+
+            GameResManager.instance.FreeAsset(data);
         }
         else
         {

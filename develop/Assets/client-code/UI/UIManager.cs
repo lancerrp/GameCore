@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class UIManager : BaseSingle<UIManager>
 {
+    public enum UILayer 
+    {
+        normal = 0,
+        popup = 1,
+        system = 2,
+    }
+
     private Canvas mCanvas = null;
     public Canvas Canvas 
     {
@@ -24,7 +31,7 @@ public class UIManager : BaseSingle<UIManager>
     }
 
     //œ‘ æUI
-    public void ShowUIPanel(string panel, bool active)
+    public void ShowUIPanel(string panel, bool active, params object[] param)
     {
         UIPanelInfo info = GetPanelInfo(panel);
         if (info == null) 
@@ -36,6 +43,7 @@ public class UIManager : BaseSingle<UIManager>
             return;
         }
         info.active = active;
+        info.param = param;
         if (active)
         {
             OpenPanelInternal(info);

@@ -37,31 +37,32 @@ public class AddressableUpdaterManager : MonoBehaviourSingleton<AddressableUpdat
         Debug.Log("Addressables初始化完成" + DateTime.Now);
 
         //检查更新
-        var updateHandle = Addressables.CheckForCatalogUpdates(false);
-        yield return updateHandle;
+        var checkHandle = Addressables.CheckForCatalogUpdates(false);
+        yield return checkHandle;
 
-        if (updateHandle.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded) 
+        if (checkHandle.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded) 
         {
-            var catalogs = updateHandle.Result;
+            var catalogs = checkHandle.Result;
             if (catalogs != null && catalogs.Count > 0) 
             {
                 mNeedUpdate = true;
                 mNeedUpdateRes = catalogs;
 
-                var downloadHanlde = Addressables.UpdateCatalogs(mNeedUpdateRes, false);
-                yield return downloadHanlde;
-                if (downloadHanlde.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded)
+                var updateHanlde = Addressables.UpdateCatalogs(mNeedUpdateRes, false);
+                yield return updateHanlde;
+                if (updateHanlde.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded)
                 {
                     mNeedDownLoadRes.Clear();
-                    foreach (var item in downloadHanlde.Result)
+                    foreach (var item in updateHanlde.Result)
                     {
                         mNeedDownLoadRes.AddRange(item.Keys);
                     }
                 }
+                Addressables.Release(updateHanlde);
             }
         }
 
-        Debug.LogFormat("更新Catalog下载完成:{0},{1},{2}", updateHandle.Status, mNeedUpdate, DateTime.Now);
+        Debug.LogFormat("更新Catalog下载完成:{0},{1},{2}", checkHandle.Status, mNeedUpdate, DateTime.Now);
         if (mNeedUpdate)
         {
             //有更新，开始下载
@@ -75,7 +76,7 @@ public class AddressableUpdaterManager : MonoBehaviourSingleton<AddressableUpdat
             //无更新
             CheckUpdateEnd();
         }
-        Addressables.Release(updateHandle);
+        Addressables.Release(checkHandle);
     }
 
     private IEnumerator StartDownload()
@@ -90,10 +91,13 @@ public class AddressableUpdaterManager : MonoBehaviourSingleton<AddressableUpdat
             yield return sizeHandle;
             if (sizeHandle.Result > 0)
             {
-                Debug.LogFormat("下载资源文件:{0}kb, key:{1}", sizeHandle.Result / 1024.0f, mNeedDownLoadRes[i]);
+                Debug.LogFormat("下载资源文件:{0}mb, key:{1}", sizeHandle.Result / (1024.0f * 1024.0f), mNeedDownLoadRes[i]);
                 var download = Addressables.DownloadDependenciesAsync(mNeedDownLoadRes[i]);
                 yield return download;
+
+                Addressables.Release(download);
             }
+            Addressables.Release(sizeHandle);
         }
     }
 

@@ -26,38 +26,16 @@ public class PackEditorTools
             return;
         }
         Debug.Log("配置文件序列化完成！" + DateTime.Now);
-
-        string path = GetPackDataPath(BuildTarget.Android);
-        if (Directory.Exists(path))
-        {
-            Directory.Delete(path, true);
-        }
-        Directory.CreateDirectory(path);
-
-        string zipPath = string.Format("{0}/bin", GameConst.ConfPath);
-        string outFile = string.Format("{0}/bin.zip", path);
-
-        ZipFileCallBack callBack = new ZipFileCallBack((result) => 
-        {
-            if (result)
-            {
-                Debug.Log("配置文件压缩完成！" + DateTime.Now);
-                CopyPackData(BuildTarget.Android);
-                AssetDatabase.Refresh();
-            }
-            else 
-            {
-                Debug.Log("配置文件压缩失败！" + DateTime.Now);
-            }
-        });
-        ZipUtility.Zip(new string[] { zipPath }, outFile, null, callBack);
+        CopyConfigBin(BuildTarget.Android);
+        AssetDatabase.Refresh();
+        Debug.Log("配置文件打包完成！" + DateTime.Now);
     }
 
     //序列化配置
     public static bool SerializeConfig()
     {
         var config = XmlUtils.GetXMLData<XmlConfigGroup>(GameConst.ConfXmlFile);
-        string xmlBinPath = string.Format("{0}/bin/xml_config.bin", GameConst.ConfPath);
+        string xmlBinPath = string.Format("{0}/bin/xml_config.txt", GameConst.ConfPath);
         if (!BinarySerializer(config, xmlBinPath))
         {
             return false;
@@ -71,7 +49,7 @@ public class PackEditorTools
             string className = string.Format("Config.{0}", info.xml_type);
             Type type = assm.GetType(className);
             var data = XmlUtils.GetXMLData(type, path);
-            string binPath = string.Format("{0}/bin/{1}.bin", GameConst.ConfPath, Path.GetFileNameWithoutExtension(info.path));
+            string binPath = string.Format("{0}/bin/{1}.txt", GameConst.ConfPath, Path.GetFileNameWithoutExtension(info.path));
             bool success = BinarySerializer(data, binPath);
             if (!success) 
             {
@@ -91,7 +69,7 @@ public class PackEditorTools
                 var data = XmlUtils.GetXMLData(type, files[j].FullName);
                 dataArray[j] = data;
             }
-            string binPath = string.Format("{0}/bin/{1}_sheet.bin", GameConst.ConfPath, Path.GetFileNameWithoutExtension(info.path));
+            string binPath = string.Format("{0}/bin/{1}_sheet.txt", GameConst.ConfPath, Path.GetFileNameWithoutExtension(info.path));
             bool success = BinarySerializer(dataArray, binPath);
             if (!success)
             {
@@ -102,13 +80,13 @@ public class PackEditorTools
     }
 
     //拷贝资源
-    public static void CopyPackData(BuildTarget target) 
+    public static void CopyConfigBin(BuildTarget target) 
     {
-        string path = GetPackDataPath(target);
-        string outPath = string.Format("{0}/pack_data", Application.streamingAssetsPath);
-        if (Directory.Exists(Application.streamingAssetsPath)) 
+        string path = string.Format("{0}/bin", GameConst.ConfPath);
+        string outPath = string.Format("{0}/config/bin", Application.dataPath);
+        if (Directory.Exists(outPath)) 
         {
-            Directory.Delete(Application.streamingAssetsPath, true);
+            Directory.Delete(outPath, true);
         }
         if (FileUtils.CopyFolder(path, outPath))
         {
@@ -170,23 +148,5 @@ public class PackEditorTools
                 writer.Close();
             }
         }
-    }
-
-    private static string GetPackDataPath(BuildTarget target)
-    {
-        string path = "";
-        if (target == BuildTarget.Android)
-        {
-            path = string.Format("{0}/../../pack_data/DataAndroid", Application.dataPath);
-        }
-        else if (target == BuildTarget.iOS)
-        {
-            path = string.Format("{0}/../../pack_data/DataIOS", Application.dataPath);
-        }
-        else 
-        {
-            path = string.Format("{0}/../../pack_data/DataPC", Application.dataPath);
-        }
-        return path;
     }
 }
