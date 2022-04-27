@@ -18,7 +18,7 @@ public class UnityWebRequestUtils
             }
             else
             {
-                Debug.LogError(request.error);
+                Helper.LogError(request.error);
                 callBack?.Invoke(false, null);
             }
         }
@@ -40,7 +40,7 @@ public class UnityWebRequestUtils
             }
             else
             {
-                Debug.LogError(request.error);
+                Helper.LogError(request.error);
                 callBack?.Invoke(false, null);
             }
         }

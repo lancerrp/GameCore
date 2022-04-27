@@ -82,7 +82,7 @@ public class BaseLoader
             }
             else
             {
-                Debug.LogError("已有异步任务在加载：" + mName);
+                Helper.LogError("已有异步任务在加载：" + mName);
                 return null;
             }
         }

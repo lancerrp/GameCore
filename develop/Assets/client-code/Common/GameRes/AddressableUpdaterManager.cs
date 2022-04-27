@@ -28,13 +28,13 @@ public class AddressableUpdaterManager : MonoBehaviourSingleton<AddressableUpdat
     //检查更新
     private IEnumerator CheckUpdate()
     {
-        Debug.Log("检查更新" + DateTime.Now);
+        Helper.Log("检查更新" + DateTime.Now);
         UILoadingPanel.instance.SetLoadValue(0, 1, 1f);
         UILoadingPanel.instance.SetTipsText(GameDataLang.Check_Update);
 
         //初始化
         yield return Addressables.InitializeAsync();
-        Debug.Log("Addressables初始化完成" + DateTime.Now);
+        Helper.Log("Addressables初始化完成" + DateTime.Now);
 
         //检查更新
         var checkHandle = Addressables.CheckForCatalogUpdates(false);
@@ -62,7 +62,7 @@ public class AddressableUpdaterManager : MonoBehaviourSingleton<AddressableUpdat
             }
         }
 
-        Debug.LogFormat("更新Catalog下载完成:{0},{1},{2}", checkHandle.Status, mNeedUpdate, DateTime.Now);
+        Helper.LogFormat("更新Catalog下载完成:{0},{1},{2}", checkHandle.Status, mNeedUpdate, DateTime.Now);
         if (mNeedUpdate)
         {
             //有更新，开始下载
@@ -91,7 +91,7 @@ public class AddressableUpdaterManager : MonoBehaviourSingleton<AddressableUpdat
             yield return sizeHandle;
             if (sizeHandle.Result > 0)
             {
-                Debug.LogFormat("下载资源文件:{0}mb, key:{1}", sizeHandle.Result / (1024.0f * 1024.0f), mNeedDownLoadRes[i]);
+                Helper.LogFormat("下载资源文件:{0}mb, key:{1}", sizeHandle.Result / (1024.0f * 1024.0f), mNeedDownLoadRes[i]);
                 var download = Addressables.DownloadDependenciesAsync(mNeedDownLoadRes[i]);
                 yield return download;
 
@@ -104,7 +104,7 @@ public class AddressableUpdaterManager : MonoBehaviourSingleton<AddressableUpdat
     //更新完成
     private void CheckUpdateEnd()
     {
-        Debug.Log("更新完成" + DateTime.Now);
+        Helper.Log("更新完成" + DateTime.Now);
         UILoadingPanel.instance.SetLoadValue(1);
         UILoadingPanel.instance.SetTipsText(GameDataLang.Check_Update_End);
         mCallBack?.Invoke();

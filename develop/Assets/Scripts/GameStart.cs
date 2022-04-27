@@ -13,7 +13,7 @@ public class GameStart : MonoBehaviour
 
     private void StartGame()
     {
-        Debug.Log("开始游戏" + DateTime.Now);
+        Helper.Log("开始游戏" + DateTime.Now);
         UILoadingPanel.instance.SetLoadValue(0);
         AddressableUpdaterManager.instance.CheckUpdateStart(CheckUpdateEnd);
     }

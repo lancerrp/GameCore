@@ -56,7 +56,7 @@ public class GameConfigManager : BaseSingle<GameConfigManager>
         if (LoadBinaryData)
         {
             var data = GameResManager.instance.LoadAsset<TextAsset>(fileName);
-            Debug.LogFormat("º”‘ÿ≈‰÷√:{0},{1},{2}", fileName, data != null, DateTime.Now);
+            Helper.LogFormat("º”‘ÿ≈‰÷√:{0},{1},{2}", fileName, data != null, DateTime.Now);
             if (data != null)
             {
                 System.IO.Stream stream = new System.IO.MemoryStream(data.bytes);
@@ -84,7 +84,7 @@ public class GameConfigManager : BaseSingle<GameConfigManager>
             }
             else 
             {
-                Debug.LogErrorFormat("load sheet error, type:{0},id:{1}",type, id);
+                Helper.LogErrorFormat("load sheet error, type:{0},id:{1}",type, id);
                 return null;
             }
         }
@@ -96,7 +96,7 @@ public class GameConfigManager : BaseSingle<GameConfigManager>
             var data = GameResManager.instance.LoadAsset<TextAsset>(fileName);
 
             T[] array = null;
-            Debug.LogFormat("º”‘ÿ≈‰÷√:{0},{1},{2}", fileName, data != null, DateTime.Now);
+            Helper.LogFormat("º”‘ÿ≈‰÷√:{0},{1},{2}", fileName, data != null, DateTime.Now);
             if (data != null)
             {
                 System.IO.Stream stream = new System.IO.MemoryStream(data.bytes);

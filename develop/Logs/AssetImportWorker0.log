@@ -1112,3 +1112,205 @@ Received Import Request.
 Start importing Assets/client-code/Common/GameRes/GameObjectLoader.cs using Guid(a1add1165a34e70468473dc79fd3f849) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '091b760fdfaf24b32f25abbf913e2036') in 0.002874 seconds
   Import took 0.005662 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001620 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Could not parse minor part '3' of Unity version '2020.3.3f1c1'.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.725 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1775 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 79.6 MB.
+System memory in use after: 79.7 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2352.
+Total: 2.169100 ms (FindLiveObjects: 0.221800 ms CreateObjectMapping: 0.072800 ms MarkObjects: 1.861000 ms  DeleteObjects: 0.012900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001550 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Could not parse minor part '3' of Unity version '2020.3.3f1c1'.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.659 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1775 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 79.6 MB.
+System memory in use after: 79.7 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2355.
+Total: 2.194200 ms (FindLiveObjects: 0.287800 ms CreateObjectMapping: 0.105600 ms MarkObjects: 1.787600 ms  DeleteObjects: 0.012400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 61548.626626 seconds.
+  path: Assets/client-code/Common
+  artifactKey: Guid(e3497dd451afd2c4ab37bd7b47d46ab4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/client-code/Common using Guid(e3497dd451afd2c4ab37bd7b47d46ab4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d787d268586950e51460aa9ac42eb47') in 0.051737 seconds
+  Import took 0.113211 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.052044 seconds.
+  path: Assets/client-code/Common
+  artifactKey: Guid(e3497dd451afd2c4ab37bd7b47d46ab4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/client-code/Common using Guid(e3497dd451afd2c4ab37bd7b47d46ab4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d787d268586950e51460aa9ac42eb47') in 0.002597 seconds
+  Import took 0.005188 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.985051 seconds.
+  path: Assets/client-code/Common/ObjectCommonUtils.cs
+  artifactKey: Guid(5b07f72498efe034a94537eee56cd724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/client-code/Common/ObjectCommonUtils.cs using Guid(5b07f72498efe034a94537eee56cd724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e41942213f268f1db5ef95a32fa627ac') in 0.003099 seconds
+  Import took 0.012746 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005063 seconds.
+  path: Assets/client-code/Common/ObjectCommonUtils.cs
+  artifactKey: Guid(5b07f72498efe034a94537eee56cd724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/client-code/Common/ObjectCommonUtils.cs using Guid(5b07f72498efe034a94537eee56cd724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e41942213f268f1db5ef95a32fa627ac') in 0.002870 seconds
+  Import took 0.005485 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 80.623489 seconds.
+  path: Assets/client-code/Common/Helper.cs
+  artifactKey: Guid(50c459452dd3dcc428b5decf8b333ffb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/client-code/Common/Helper.cs using Guid(50c459452dd3dcc428b5decf8b333ffb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3990c5a4abb0da0c9ca317539ec10a0') in 0.002617 seconds
+  Import took 0.006461 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002003 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Could not parse minor part '3' of Unity version '2020.3.3f1c1'.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.862 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1776 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 79.8 MB.
+System memory in use after: 79.9 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2359.
+Total: 1.981000 ms (FindLiveObjects: 0.238700 ms CreateObjectMapping: 0.073600 ms MarkObjects: 1.654700 ms  DeleteObjects: 0.013100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001493 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Could not parse minor part '3' of Unity version '2020.3.3f1c1'.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.655 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1776 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 79.8 MB.
+System memory in use after: 79.9 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2362.
+Total: 2.067800 ms (FindLiveObjects: 0.268400 ms CreateObjectMapping: 0.073900 ms MarkObjects: 1.711300 ms  DeleteObjects: 0.012700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001475 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Could not parse minor part '3' of Unity version '2020.3.3f1c1'.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.652 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1776 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 79.8 MB.
+System memory in use after: 79.9 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2365.
+Total: 1.865200 ms (FindLiveObjects: 0.207100 ms CreateObjectMapping: 0.062200 ms MarkObjects: 1.582600 ms  DeleteObjects: 0.012000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001446 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Could not parse minor part '3' of Unity version '2020.3.3f1c1'.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.688 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1776 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 79.8 MB.
+System memory in use after: 79.9 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2368.
+Total: 2.205800 ms (FindLiveObjects: 0.213500 ms CreateObjectMapping: 0.060200 ms MarkObjects: 1.917800 ms  DeleteObjects: 0.012800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000

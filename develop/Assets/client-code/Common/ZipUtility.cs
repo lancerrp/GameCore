@@ -134,7 +134,7 @@ public static class ZipUtility
         }
         catch (System.Exception _e)
         {
-            Debug.LogError("[ZipUtility.UnzipFile]: " + _e.ToString());
+            Helper.LogError("[ZipUtility.UnzipFile]: " + _e.ToString());
 
             if (null != _unzipCallback)
                 _unzipCallback.OnFinished(false);
@@ -240,7 +240,7 @@ public static class ZipUtility
                 }
                 catch (System.Exception _e)
                 {
-                    Debug.LogError("[ZipUtility.UnzipFile]: " + _e.ToString());
+                    Helper.LogError("[ZipUtility.UnzipFile]: " + _e.ToString());
 
                     if (null != _unzipCallback)
                         _unzipCallback.OnFinished(false);
@@ -294,7 +294,7 @@ public static class ZipUtility
         }
         catch (System.Exception _e)
         {
-            Debug.LogError("[ZipUtility.ZipFile]: " + _e.ToString());
+            Helper.LogError("[ZipUtility.ZipFile]: " + _e.ToString());
             return false;
         }
         finally
@@ -342,7 +342,7 @@ public static class ZipUtility
         }
         catch (System.Exception _e)
         {
-            Debug.LogError("[ZipUtility.ZipDirectory]: " + _e.ToString());
+            Helper.LogError("[ZipUtility.ZipDirectory]: " + _e.ToString());
             return false;
         }
 
